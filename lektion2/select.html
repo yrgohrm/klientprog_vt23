@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form action="/api/login" method="post">
+        <select name="country">
+            <option value="denmark">Danmark</option>
+            <option value="finland">Finland</option>
+            <option value="iceland">Island</option>
+            <option value="norway">Norge</option>
+            <option value="sweden" selected>Sverige</option>
+        </select>
+
+        <br>
+
+        <select name="country" size="5" multiple>
+            <optgroup label="Skandinavien">
+                <option value="denmark">Danmark</option>
+                <option value="finland">Finland</option>
+                <option value="iceland">Island</option>
+                <option value="norway">Norge</option>
+                <option value="sweden">Sverige</option>
+            </optgroup>
+            <optgroup label="Övriga världen">
+                <option value="germany">Tyskland</option>
+                <option value="usa">USA</option>
+                <option value="china">Kina</option>
+            </optgroup>
+        </select>
+
+    </form>
+
+
+</body>
+
+</html>

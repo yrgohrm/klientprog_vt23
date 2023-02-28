@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>En bra sida</h1>
+
+    <form action="http://localhost:8080/api/echo" method="post">
+        <input type="text" name="username" placeholder="user@example.com"><br>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Logga in">
+    </form>
+
+    <form action="/api/login" method="post">
+        <fieldset>
+            <legend>Inloggning</legend>
+            <label>Användarnamn: <input type="text" name="user"
+                                placeholder="Användarnamn"></label><br>
+            <label>Lösenord: <input type="password" name="password" placeholder="Lösenord"></label><br>
+            <input type="submit" value="Logga in">
+        </fieldset>
+    </form>
+
+    <form action="/api/login" method="post">
+        <fieldset>
+            <legend>Inloggning</legend>
+            <label for="username">Användarnamn:</label><br>
+            <input type="text" name="user" placeholder="Användarnamn" id="username"><br>
+            <label>Lösenord: <input type="password" name="password" placeholder="Lösenord"></label><br>
+            <input type="submit" value="Logga in">
+            <input type="reset">
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
