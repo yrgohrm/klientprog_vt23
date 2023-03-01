@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Testsida</title>
+    <style>
+        * {
+            padding: 0.25rem;
+        }
+
+        body {
+            max-width: 65ch;
+            text-align: justify;
+        }
+
+        section {
+            margin: 1rem;
+            border: 1px solid black;
+        }
+
+        p * {
+            border: 1px dashed blue;
+        }
+
+        input[type="text"] {
+            color: darkmagenta;
+        }
+
+        ul em {
+            color: green;
+        }
+
+        li > em {
+            /* child selector */
+            color: blue;
+        }
+
+        div ~ p {
+            /* general sibling selector */
+            color: blue;
+        }
+
+        h2 + p {
+            /* adjacent sibling selector */
+            font-weight: bold;
+        }
+
+        a:visited {
+            /* pseudo class selector */
+            color: fuchsia;
+        }
+
+        li:hover {
+            background-color: hotpink;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Undermålig prestation hotar företag</h2>
+
+    <p>
+        Lamm Industries, en av de ledande programvaruföretagen på marknaden, har
+        nyligen avslöjat att deras anställde programmerare Bosse Bredsladd har
+        varit med företaget i över 20 år trots sin bristande tekniska kompetens.
+    </p>
+
+    <p>
+        Bosse Bredsladd har varit anställd på Lamm Industries sedan början av
+        sin karriär, men hans prestationer som programmerare har alltid varit
+        under genomsnittet. Hans kod har ofta innehållit buggar och hans
+        lösningar har varit ineffektiva, vilket har resulterat i att flera av
+        företagets kunder har lämnat för andra programvaruleverantörer.
+    </p>
+
+    <p>
+        Trots detta har Lamm Industries fortsatt att anställa Bredsladd och ge
+        honom ansvariga roller inom företaget. Enligt källor på företaget är det
+        på grund av Bosse Bredsladds personliga egenskaper som han har stannat
+        kvar så länge. Han är en trevlig person som alltid är villig att hjälpa
+        till och stötta sina kollegor.
+    </p>
+
+    <ul>
+        <li>Lamm Industries är ett programvaruföretag som nyligen avslöjade att deras programmerare Bosse Bredsladd har varit med företaget i över 20 år trots bristande teknisk kompetens.</li>
+        <li>Bredsladds kod har <em>ofta</em> innehållit buggar och hans lösningar har varit <span><em>ineffektiva</em></span>, vilket har lett till klagomål från kunder.</li>
+        <li>Lamm Industries betonar att Bredsladds bristande tekniska kompetens <em>inte</em> är en reflektion av företagets övergripande standard, och att de har många andra kompetenta programmerare i sitt team.</li>
+        <li>Företaget fortsätter att arbeta för att förbättra sin produkt och tekniska standarder, samtidigt som de värderar att ta hand om sina anställda och ha en stark gemenskap inom företaget.</li>
+    </ul>
+
+    <section>
+        <div>
+            Lamm Industries vill inte kommentera frågan ytterligare utan hänvisar till att de är måna om både sina produkter och sin personal.
+        </div>
+
+        <p>
+            Lena Lamm
+        </p>
+    </section>
+
+    <p>
+        För mer info besök <a href="https://sv.wikipedia.org">Wikipedia</a>.
+    </p>
+
+    <form action="">
+        <fieldset>
+            <legend>Inloggning prenumeranter</legend>
+            <input type="text" placeholder="e-post"><br>
+            <input type="password" placeholder="lösenord"><br>
+            <input type="submit" value="Logga in">
+        </fieldset>
+    </form>
+</body>
+
+</html>
