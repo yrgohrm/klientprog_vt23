@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        html {
+            --my-custom-prop: 30px;
+            --fg-color: hotpink;
+            --bg-color: antiquewhite;
+        }
+
+        div {
+            color: var(--fg-color);
+            background-color: var(--bg-color);
+        }
+
+        .inverted {
+            color: var(--bg-color);
+            background-color: var(--fg-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ab?</div>
+    <div class="inverted">inverted</div>
+</body>
+
+</html>
