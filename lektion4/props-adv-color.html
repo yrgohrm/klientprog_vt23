@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        :root {
+            --lightness: 1;
+        }
+
+        div {
+            background-color: hsl(330, 100%, min(100%, calc(var(--lightness) * 71%)));
+        }
+
+        .dark {
+            --lightness: 0.5;
+        }
+
+        .light {
+            --lightness: 1.1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, vero.
+    </div>
+    <div class="dark">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, aliquid.
+    </div>
+    <div class="light">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolores.
+    </div>
+</body>
+</html>
