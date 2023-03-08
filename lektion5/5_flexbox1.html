@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+    
+        nav li {
+            margin: 0 0.5rem;
+        }
+    
+        nav li:last-child {
+            margin-left: auto;
+        }
+    
+        nav a {
+            background-color: hsl(174, 72%, 76%);
+            border-bottom: 1px solid teal;
+            color: #000;
+            display: block;
+            padding: 0.5rem;
+            text-decoration: none;
+        }
+    
+        @media screen and (max-width: 600px) {
+            nav ul {
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+        }
+
+        @media screen and (max-width: 230px) {
+            nav ul {
+                display: flex;
+                flex-direction: column;
+            }
+
+            nav li {
+                margin-left: 0;
+            }
+
+            nav li:nth-child(4) {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Hem</a></li>
+            <li><a href="#">Vänner</a></li>
+            <li><a href="#">Erbjudanden</a></li>
+            <li><a href="#">Logga ut</a></li>
+        </ul>
+    </nav>    
+</body>
+</html>

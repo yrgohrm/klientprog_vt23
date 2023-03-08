@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad document!</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        
+        /* this will not work, this first query will always be overwritten by the second */
+        @media screen and (min-width: 768px) {
+            body {
+                background-color: royalblue;
+            }
+        }
+
+        @media screen and (min-width: 576px) {
+            body {
+                background-color: hotpink;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, officia?
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .thegrid {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: auto 1fr;
+            min-height: 100dvh;
+        }
+
+        header {
+            grid-column: 1/-1;
+
+            background-color: #011936;
+            color: white;
+            padding: 1rem;
+        }
+
+        .menu {
+            background-color: #465362;
+            color: white;
+            padding: 1rem;
+        }
+
+        .ads {
+            background-color: #82A3A1;
+            color: white;
+            padding: 1rem;
+        }
+
+        main {
+            background-color: #C0DFA1;
+            color: black;
+            padding: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+        }
+
+        .greybox {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /* grid-template-rows: 1fr 1fr 1fr; */
+            width: 20%;
+            height: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="thegrid">
+        <header>
+            <h1>The Awesome Site</h1>
+        </header>
+        <nav class="menu">
+            navigation
+            <ul>
+                <li>bla bla bla</li>
+                <li>bla bla bla</li>
+                <li>bla bla bla</li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Lots of stuff here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, blanditiis?</p>
+
+            <div class="greybox">
+                <div style="background-color: #eee;"></div>
+                <div style="background-color: #ddd;"></div>
+                <div style="background-color: #ccc;"></div>
+                <div style="background-color: #bbb;"></div>
+                <div style="background-color: #aaa;"></div>
+                <div style="background-color: #999;"></div>
+                <div style="background-color: #888;"></div>
+                <div style="background-color: #777;"></div>
+                <div style="background-color: #666;"></div>
+            </div>
+
+        </main>
+        <aside class="ads">ads</aside>
+    </div>
+</body>
+
+</html>

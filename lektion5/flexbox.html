@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            border: 1px solid grey;
+        }
+
+        ul {
+            border: 1px solid hotpink;
+            padding: 0;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            /* justify-content: space-around; */
+        }
+
+        nav li {
+            list-style: none;
+        }
+
+        nav li:last-child {
+            margin-left: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Hem</a></li>
+            <li><a href="#">Erbjudanden</a></li>
+            <li><a href="#">Spel</a></li>
+            <li><a href="#">Topplistor</a></li>
+            <li><a href="#">Logga ut</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
