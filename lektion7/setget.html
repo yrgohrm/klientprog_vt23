@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="output.js"></script>
+</head>
+
+<body>
+    <script>
+        class Car {
+            #name
+
+            constructor(name, year) {
+                this.#name = name
+                this.year = year
+            }
+
+            printInfo() {
+                output(this.#name)
+                output(this.year)
+            }
+
+            get name() {
+                return this.#name + "xxxx"
+            }
+
+            set name(n) {
+                this.#name = n + " bosse" 
+            }
+        }
+
+        let car = new Car('Lada Vesta', 2020)
+        // car.printInfo()
+        car.name = "hej"
+        car.year = 2332
+        car.nisse = 222
+        output(car.name)
+        output(car.year)
+        output(car.nisse)
+    </script>
+</body>
+
+</html>
