@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            padding: 0.75rem;
+            max-width: fit-content;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .flip {
+            transform: scaleX(-1);
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Hejsan alla glada!</p>
+    <p>ni talar bra latin</p>
+    <p>smart tv-orgie i grovt trams</p>
+
+    <script>
+        function mouseHandler(event) {
+            const elem = event.target
+            if (elem.classList.contains("flip")) {
+                elem.classList.remove("flip")
+            }
+            else {
+                elem.classList.add("flip")
+            }
+        }
+
+        const ps = document.querySelectorAll("p")
+        for (const elem of ps) {
+            elem.addEventListener('mouseenter', mouseHandler)
+            elem.addEventListener('mouseleave', mouseHandler)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 0.75rem;
+            border: 2rem solid grey;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Hejsan alla glada!</p>
+    <p>ni talar bra latin</p>
+    <p>smart tv-orgie i grovt trams</p>
+
+    <script>
+        function mouseHandler(event) {
+            const text = event.target.textContent
+            const newText = text.split('').reverse().join('')
+            event.target.textContent = newText
+        }
+
+        const ps = document.querySelectorAll("p")
+        for (const elem of ps) {
+            elem.addEventListener('mouseenter', mouseHandler)
+            elem.addEventListener('mouseleave', mouseHandler)
+        }
+    </script>
+</body>
+
+</html>

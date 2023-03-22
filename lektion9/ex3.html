@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 2rem;
+            padding: 2rem;
+            border: 2rem solid grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outside">
+        <nav>
+            <div id="d1">
+                <div id="d2">
+                    <div id="d3">
+                        Snälla, gör något! Klicka mig!
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script>
+        function buttonClicked(event) {
+            event.stopPropagation()
+
+            console.log("target: " + event.target.id)
+            console.log("current: " + event.currentTarget.id)
+        }
+
+        const divs = document.querySelectorAll("div")
+        for (const elem of divs) {
+            elem.addEventListener('click', buttonClicked)
+        }
+    </script>
+</body>
+
+</html>
