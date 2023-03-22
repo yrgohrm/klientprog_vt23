@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hejsan</p>
+    <ul>
+        <li>ett</li>
+        <li>två</li>
+        <li>tre</li>
+    </ul>
+
+    <p><em>hejsan</em></p>
+
+    <script>
+        function printElement(elem) {
+            console.log(elem.tagName)
+
+            for (const e2 of elem.children) {
+                printElement(e2)
+            }
+        }
+
+        printElement(document.documentElement)
+    </script>
+</body>
+</html>

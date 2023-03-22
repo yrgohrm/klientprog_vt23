@@ -1,0 +1,7 @@
+.nice {
+    padding: 0.25rem;
+    border: 3px solid darkgray;
+    border-radius: 3px;
+    background-color: lightgray;
+    text-transform: uppercase;
+}
