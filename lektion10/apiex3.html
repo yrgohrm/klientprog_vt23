@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Exempel</title>
+
+    <script type="module">
+
+        async function getData(page) {
+            let bpkResp = await fetch(`https://brottsplatskartan.se/api/events?app=yrgo-example&location=göteborg&limit=1&page=${page}`)
+            let data = await bpkResp.json()
+            console.log(page, data.data[0].description)
+        }
+
+        getData(1)
+        getData(2)
+        getData(3)
+        getData(4)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

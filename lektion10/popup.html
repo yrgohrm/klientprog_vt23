@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dn {
+            display: none;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .popup {
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(100, 100, 100, 0.8);
+            z-index: 1000;
+        }
+
+        .popup__errorMessage {
+            background-color: hotpink;
+            border: 2px solid pink;
+            border-radius: 5px;
+            padding: 2em;
+        }
+    </style>
+    <script>
+        function showError(message) {
+            let errorPopup = document.getElementById('errorPopup')
+            errorPopup.querySelector('div').innerText = message
+            errorPopup.classList.remove('dn')
+            errorPopup.classList.add('flex')
+        }
+
+        window.addEventListener('load', () => {
+            let errorPopup = document.getElementById('errorPopup')
+            errorPopup.addEventListener('click', (evt) => {
+                evt.currentTarget.classList.remove('flex')
+                evt.currentTarget.classList.add('dn')
+                evt.stopPropagation()
+            })
+
+            let button = document.getElementById('errorButton')
+            button.addEventListener('click', () => {
+                showError("An error has occurred, please call someone.")
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="errorPopup" class="popup dn">
+        <div class="popup__errorMessage"></div>
+    </div>
+
+    <div id="main">
+        <div><h1>The best web page ever.</h1></div>
+        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, nesciunt.</div>
+        <div><input id="errorButton" type="button" value="Error!"></div>
+    </div>
+</body>
+</html>
