@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <form>
+            <input type="checkbox" v-model="somecheckbox"> Rolig text<br>
+            <input type="number" v-model="count">
+        </form>
+
+        <div v-if="somecheckbox">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, vel!
+
+            <div v-for="val in count">
+                {{val}}
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/vue@3.2.47"
+        integrity="sha384-mgp1hnBYcnmsGPH4Gggyec1hk0SHNDFRiPziZ9r5ZfLLV9nr5uLprnqdOCR5sQHQ"
+        crossorigin="anonymous"></script>
+    <script>
+        const app = {
+            data() {
+                return {
+                    somecheckbox: true,
+                    count: 1,
+                }
+            }
+        }
+
+        Vue.createApp(app).mount("#app")
+    </script>
+</body>
+
+</html>
