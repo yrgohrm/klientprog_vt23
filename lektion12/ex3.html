@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="Knapp 1" @click="write" data-message="Hejsan">
+        <input type="button" value="Knapp 2" @click="write" data-message="Halloj">
+    </div>
+    
+    <script src="https://unpkg.com/vue@3.2.47"></script>
+    <script>
+        const app = {
+            data() {
+                return {
+                    count: 1
+                }
+            },
+            methods: {
+                write(event) {
+                    console.log(event.target.dataset.message)
+                }
+            }
+        }
+    
+        Vue.createApp(app).mount("#app")
+    </script>
+</body>
+</html>

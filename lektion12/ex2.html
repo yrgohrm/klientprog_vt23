@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <a href="#" @click.prevent="write">GNU's Not UNIX</a>
+    </div>
+    
+    <script src="https://unpkg.com/vue@3.2.47"></script>
+    <script>
+        const app = {
+            data() {
+                return {
+                    count: 1
+                }
+            },
+            methods: {
+                write() {
+                    console.log("Hejsan")
+                }
+            }
+        }
+    
+        Vue.createApp(app).mount("#app")
+    </script>
+</body>
+</html>
