@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #error {
+            background-color: red;
+            color:aliceblue;
+            position: fixed;
+            width: 200px;
+            height: 40px;
+            border-radius: 5px;
+            bottom: 1rem;
+            right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <input type="button" value="Next Fact!" @click="addCatFact">
+
+        <div v-for="fact of facts">
+            <img :src="fact.url" alt="">
+            {{ fact.text }}
+        </div>
+
+
+        <div id="error" v-if="error !== null">
+            {{ error }}
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/vue@3.2.47"></script>
+    <script>
+        async function catFact() {
+            const resp = await fetch("https://cat-fact.herokuapp.com/facts/random")
+            if (!resp.ok) {
+                throw new Error("oops!")           
+            }
+    
+            const data = await resp.json()
+            if (data.text === undefined) {
+                throw new Error("oops!")
+            }
+
+            return data.text
+        }
+
+        const app = {
+            data() {
+                return {
+                    facts: [],
+                    error: null,
+                }
+            },
+            methods: {
+                async addCatFact() {
+                    try {
+                        const text = await catFact()
+                        const factObj = {
+                            url: `https://robohash.org/${encodeURIComponent(text)}.png?set=set4&size=150x150`,
+                            text,
+                        }
+                        this.facts.push(factObj)
+                    }
+                    catch (err) {
+                        this.error = "Det blev änna lite fel"
+                        setTimeout(() => this.error = null, 3000)
+                    }
+                }
+            },
+            async created() {
+            }
+        }
+
+        Vue.createApp(app).mount("#app")
+    </script>
+
+
+</body>
+</html>

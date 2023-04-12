@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" :value="btnValue">
+
+    {{ btnValue }}
+
+    <div id="app">
+        <input type="button" :value="btnValue">
+
+        <input type="number" v-model="count">
+
+        <p v-for="i of Number(count)">
+            {{ btnValue }}
+        </p>
+    </div>
+    
+    <script src="https://unpkg.com/vue@3.2.47"></script>
+    <script>
+        const app = {
+            data() {
+                return {
+                    btnValue: "Klicka mig!",
+                    count: "0",
+                }
+            },
+            mounted() {
+                setTimeout(() => this.btnValue = "Klicka mig ej", 3000)
+            },
+        }
+    
+        Vue.createApp(app).mount("#app")
+    </script>
+</body>
+</html>

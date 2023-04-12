@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ count }}<br>
+        <input type="button" value="++" @click="increase" @mouseover="info">
+    </div>
+    
+    <script src="https://unpkg.com/vue@3.2.47"></script>
+    <script>
+        const app = {
+            data() {
+                return {
+                    count: 1
+                }
+            },
+            methods: {
+                increase(evt) {
+                    console.log(evt)
+                    this.count++
+                },
+                info(evt) {
+                    console.log(evt.clientX)
+                }
+            }
+        }
+    
+        Vue.createApp(app).mount("#app")
+    </script>
+</body>
+</html>
