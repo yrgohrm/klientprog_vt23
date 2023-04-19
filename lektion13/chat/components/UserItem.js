@@ -2,11 +2,11 @@ import Avatar from './Avatar.js'
 import { warnUser } from '../util/misc.js'
 
 export default {
-    props: {
-        user: Object
-    },
     components: {
         Avatar
+    },
+    props: {
+        user: Object
     },
     methods: {
         click() {
