@@ -1,0 +1,10 @@
+@use "~bootstrap/scss/bootstrap";
+
+.custom-element {
+    background-color: bootstrap.$primary;
+    transition: background-color 0.2s ease-in;
+}
+
+.custom-element:hover {
+    background-color: bootstrap.tint-color(bootstrap.$primary, 60%);
+}

@@ -1,0 +1,8 @@
+@use "~bootstrap/scss/bootstrap" with (
+    $primary: #2ea44f,
+    $secondary: lightgrey
+);
+
+a {
+    text-decoration: none;
+}
